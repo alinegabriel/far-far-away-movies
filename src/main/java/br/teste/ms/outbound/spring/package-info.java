@@ -1,0 +1,1 @@
+package br.teste.ms.outbound.spring;
