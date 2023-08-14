@@ -1,12 +1,14 @@
 package br.quarkus.ms.core.entity;
 
-import java.util.List;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
+@Table(name = "movie")
 public class Movies {
 
 	@Column(name = "adult")
@@ -16,7 +18,7 @@ public class Movies {
     private String backdropPath;
 	
 	@Column(name = "genre_ids")
-    private List<Integer> genreIds;
+    private int genreIds;
 
 	@Id
     private long id;
