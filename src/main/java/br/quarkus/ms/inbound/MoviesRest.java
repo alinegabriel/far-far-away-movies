@@ -8,6 +8,7 @@ import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.QueryParam;
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.core.MediaType;
 
@@ -19,9 +20,9 @@ public class MoviesRest {
 	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response listarFilmes() {
+	public Response listarFilmes(@QueryParam("page") int page) {
 		try {
-			List<Movie> listarFilmesPopulares = moviesServicePort.listarFilmes();
+			List<Movie> listarFilmesPopulares = moviesServicePort.listarFilmes(page);
 			return Response.status(200).entity(listarFilmesPopulares).build();
 		} catch (Exception ex) {
 			return Response.status(400).entity(ex.getMessage()).type("application/json").build();

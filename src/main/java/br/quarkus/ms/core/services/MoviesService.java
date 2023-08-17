@@ -19,8 +19,8 @@ public class MoviesService implements MoviesServicePort {
 	private Client entrada = ClientBuilder.newClient();
 
 	@Override
-	public List<Movie> listarFilmes() {
-	        String url = API_URL + "?api_key=" + API_KEY + "&language=en-US";
+	public List<Movie> listarFilmes(int page) {
+	        String url = API_URL + "?api_key=" + API_KEY + "&language=en-US" + page;
 
 	        Movies response = entrada
 	            .target(url)
