@@ -2,8 +2,6 @@ package br.quarkus.ms.core.entity;
 
 import java.time.LocalDate;
 import java.util.List;
-
-import jakarta.persistence.Id;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

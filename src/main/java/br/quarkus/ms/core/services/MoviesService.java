@@ -25,6 +25,6 @@ public class MoviesService implements MoviesServicePort {
 	            .request(MediaType.APPLICATION_JSON)
 	            .get(Movies.class);	        
 	        
-	        return new Movies(page, response.getResults(), response.getTotal_pages(), response.getTotal_results());
-	}
+	       return new Movies(page, response.getResults(), response.getTotal_pages(), response.getTotal_results());
+		}
 }
