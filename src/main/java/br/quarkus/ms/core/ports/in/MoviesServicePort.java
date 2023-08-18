@@ -1,11 +1,9 @@
 package br.quarkus.ms.core.ports.in;
 
-import java.util.List;
-
-import br.quarkus.ms.core.entity.Movie;
+import br.quarkus.ms.core.entity.Movies;
 
 public interface MoviesServicePort {
 
-	List<Movie> listarFilmes(int page);
+	Movies listarFilmes(int page);
 	
 }
