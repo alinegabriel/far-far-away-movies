@@ -16,4 +16,12 @@ public class Movies {
     private int total_pages;
     
     private int total_results;
+
+	public Movies(int page, List<Movie> results, int total_pages, int total_results) {
+		this.page = page;
+		this.results = results;
+		this.total_pages = total_pages;
+		this.total_results = total_results;
+	}
+    
 }
