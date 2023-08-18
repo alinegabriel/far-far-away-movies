@@ -1,8 +1,5 @@
 package br.quarkus.ms.core.services;
 
-import java.util.List;
-
-import br.quarkus.ms.core.entity.Movie;
 import br.quarkus.ms.core.entity.Movies;
 import br.quarkus.ms.core.ports.in.MoviesServicePort;
 import jakarta.enterprise.context.ApplicationScoped;
@@ -26,11 +23,8 @@ public class MoviesService implements MoviesServicePort {
 	        Movies response = entrada
 	            .target(url)
 	            .request(MediaType.APPLICATION_JSON)
-	            .get(Movies.class);
-
-	        List<Movie> allResults = response.getResults();
+	            .get(Movies.class);	        
 	        
-	        return new Movies(page, allResults, response.getTotal_pages(), response.getTotal_results());
-	
+	        return new Movies(page, response.getResults(), response.getTotal_pages(), response.getTotal_results());
 	}
 }

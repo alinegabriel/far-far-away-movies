@@ -17,7 +17,6 @@ public class Movie {
 	
     private List<Integer> genre_ids;
 
-    @Id
     private long id;
 	
     private String original_language;
