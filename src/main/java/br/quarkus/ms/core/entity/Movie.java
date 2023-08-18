@@ -2,8 +2,6 @@ package br.quarkus.ms.core.entity;
 
 import java.time.LocalDate;
 import java.util.List;
-
-import jakarta.persistence.Id;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -17,7 +15,6 @@ public class Movie {
 	
     private List<Integer> genre_ids;
 
-    @Id
     private long id;
 	
     private String original_language;
