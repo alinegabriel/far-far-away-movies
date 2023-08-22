@@ -5,5 +5,7 @@ import br.quarkus.ms.core.entity.Movies;
 public interface MoviesServicePort {
 
 	Movies listarFilmes(int page);
+
+	Movies salvarFilmes(int page);
 	
 }

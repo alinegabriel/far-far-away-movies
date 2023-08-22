@@ -22,7 +22,7 @@ public class Movie {
 	@Column(name = "backdrop_path")
     private String backdrop_path;
 	
-	@Column()
+	@Column(name = "genre_ids")
     private List<Integer> genre_ids;
 
     @Id
@@ -58,4 +58,5 @@ public class Movie {
 	@Column(name = "vote_count")
     private int vote_count;
 
+    
 }
