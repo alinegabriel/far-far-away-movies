@@ -1,0 +1,1 @@
+package br.quarkus.ms.configuration;
