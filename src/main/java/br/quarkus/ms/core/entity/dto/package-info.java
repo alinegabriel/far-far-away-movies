@@ -1,1 +1,0 @@
-package br.quarkus.ms.core.entity.dto;

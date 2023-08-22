@@ -2,6 +2,7 @@ package br.quarkus.ms.inbound;
 
 import br.quarkus.ms.core.entity.Movies;
 import br.quarkus.ms.core.ports.in.MoviesServicePort;
+
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
