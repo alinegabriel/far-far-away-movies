@@ -2,8 +2,10 @@ package br.quarkus.ms.inbound;
 
 import br.quarkus.ms.core.entity.Movies;
 import br.quarkus.ms.core.ports.in.MoviesServicePort;
+
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
+import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.QueryParam;
@@ -22,6 +24,16 @@ public class MoviesRest {
 		try {
 			Movies listarFilmesPopulares = moviesServicePort.listarFilmes(page);
 			return Response.status(200).entity(listarFilmesPopulares).build();
+		} catch (Exception ex) {
+			return Response.status(400).entity(ex.getMessage()).type("application/json").build();
+		}
+	}
+	
+	@POST
+	public Response salvarFilmmes(@QueryParam("page") int page) {
+		try {
+			Movies salvarFilmesPopulares = moviesServicePort.salvarFilmes(page);
+			return Response.status(201).entity(salvarFilmesPopulares).build();
 		} catch (Exception ex) {
 			return Response.status(400).entity(ex.getMessage()).type("application/json").build();
 		}
