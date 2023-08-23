@@ -31,7 +31,7 @@ If you want to build an _über-jar_, execute the following command:
 
 The application, packaged as an _über-jar_, is now runnable using `java -jar target/*-runner.jar`.
 
-For testing the GET endpoint, use the following path:
+To test the GET endpoint, use the following path:
 
 ```shell script
 http://localhost:8080/movies/listagem?page=
