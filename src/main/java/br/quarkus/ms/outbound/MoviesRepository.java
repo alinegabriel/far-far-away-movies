@@ -13,7 +13,7 @@ public class MoviesRepository implements MoviesRepositoryPort{
 	private MoviesSpringRepository moviesSpringRepository;
 	
 	@Override
-	public void saveAll(Movie movie) {
+	public void save(Movie movie) {
 		moviesSpringRepository.save(movie);
 		
 	}

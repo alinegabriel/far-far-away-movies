@@ -29,6 +29,7 @@ public class MoviesRest {
 		}
 	}
 	
+	@Path("/salvar")
 	@POST
 	public Response salvarFilmmes(@QueryParam("page") int page) {
 		try {
